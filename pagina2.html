@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4e1d2; /* Fondo de color pastel */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #ffdab9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        header p {
+            color: #555;
+        }
+
+        /* Estilos del contenedor de productos */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos de cada tarjeta de producto */
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            cursor: pointer; /* Cambia el cursor a "manito" al pasar */
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        /* Botón de comprar */
+        .buy-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Descripción al pasar el cursor */
+        .product-description {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card:hover .product-description {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Catálogo de Productos</h1>
+    <p>Bienvenido a nuestro catálogo en línea. Explora nuestra selección de productos y encuentra lo que buscas.</p>
+</header>
+
+<div class="product-container">
+    <!-- Producto 1 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 1">
+        <div class="product-info">
+            <h3>Producto 1</h3>
+            <p>Precio: $10.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 1.</div>
+    </div>
+    
+    <!-- Producto 2 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 2">
+        <div class="product-info">
+            <h3>Producto 2</h3>
+            <p>Precio: $15.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 2.</div>
+    </div>
+    
+    <!-- Producto 3 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 3">
+        <div class="product-info">
+            <h3>Producto 3</h3>
+            <p>Precio: $20.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 3.</div>
+    </div>
+    
+    <!-- Producto 4 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 4">
+        <div class="product-info">
+            <h3>Producto 4</h3>
+            <p>Precio: $25.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 4.</div>
+    </div>
+    
+    <!-- Producto 5 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 5">
+        <div class="product-info">
+            <h3>Producto 5</h3>
+            <p>Precio: $30.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 5.</div>
+    </div>
+    
+    <!-- Producto 6 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 6">
+        <div class="product-info">
+            <h3>Producto 6</h3>
+            <p>Precio: $35.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 6.</div>
+    </div>
+    
+    <!-- Producto 7 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 7">
+        <div class="product-info">
+            <h3>Producto 7</h3>
+            <p>Precio: $40.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 7.</div>
+    </div>
+    
+    <!-- Producto 8 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 8">
+        <div class="product-info">
+            <h3>Producto 8</h3>
+            <p>Precio: $45.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 8.</div>
+    </div>
+    
+    <!-- Producto 9 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 9">
+        <div class="product-info">
+            <h3>Producto 9</h3>
+            <p>Precio: $50.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 9.</div>
+    </div>
+    
+    <!-- Producto 10 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Producto 10">
+        <div class="product-info">
+            <h3>Producto 10</h3>
+            <p>Precio: $55.00</p>
+            <a href="#" class="buy-button">Comprar</a>
+        </div>
+        <div class="product-description">Descripción detallada del producto 10.</div>
+    </div>
+</div>
+
+</body>
+</html>
